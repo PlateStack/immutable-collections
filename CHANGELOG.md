@@ -18,4 +18,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - SortedSet
   - NavigableSet
 
-[Unreleased]: https://github.com/PlateStack/PlateAPI/compare/v0.0.0...HEAD
+[Unreleased]: https://github.com/PlateStack/immutable-collections/compare/v0.0.0...HEAD
