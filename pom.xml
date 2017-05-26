@@ -33,6 +33,31 @@
         <kotlintest.version>2.0.2</kotlintest.version>
     </properties>
 
+    <organization>
+        <name>PlateStack</name>
+        <url>http://platestack.org</url>
+    </organization>
+
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/PlateStack/immutable-collections/issues</url>
+    </issueManagement>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>joserobjr</id>
+            <name>José Roberto de Araújo Júnior</name>
+        </developer>
+    </developers>
+
     <dependencies>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
