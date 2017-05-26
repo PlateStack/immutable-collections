@@ -19,27 +19,12 @@ package org.platestack.structure.immutable
 import java.io.Serializable
 import java.util.*
 
-internal class ImmutableSingletonMap<K, V>(key: K, value: V):
+internal class ImmutableSingletonMap<K, out V>(key: K, value: V, private val base: Map<K,V> = Collections.singletonMap(key, value)):
         AbstractImmutableMap<K, V>(),
-        Map<K, V> by Collections.singletonMap(key, value),
-        Serializable { companion object { private const val serialVersionUID = 1L } }
+        Map<K, V> by base,
+        Serializable { companion object { private const val serialVersionUID = 1L }
 
-
-/*
-internal class ImmutableSingletonMap<K, V>(private val key: K, private val value: V): AbstractImmutableMap<K, V>() {
-    private val entry = object : Map.Entry<K, V>{
-        override val key get() = this@ImmutableSingletonMap.key
-        override val value get() = this@ImmutableSingletonMap.value
-    }
-
-    override val entries: Set<Map.Entry<K, V>> = setOf(entry)
-    override val keys = setOf(key)
-    override val size = 1
-    override val values = listOf(value)
-
-    override fun containsKey(key: K) = key == this.key
-    override fun containsValue(value: V) = value == this.value
-    override fun get(key: K) = if(key in this) value else null
-    override fun isEmpty() = false
+    override fun equals(other: Any?) = other === this || base == other
+    override fun hashCode() = base.hashCode()
+    override fun toString() = base.toString()
 }
-*/

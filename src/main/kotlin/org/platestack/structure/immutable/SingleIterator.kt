@@ -30,4 +30,26 @@ internal class SingleIterator<E>(private val entry: E): Iterator<E>, Serializabl
             throw NoSuchElementException()
         return entry
     }
+
+    override fun toString(): String {
+        return "SingleIterator(entry=$entry, next=$next)"
+    }
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (other?.javaClass != javaClass) return false
+
+        other as SingleIterator<*>
+
+        if (entry != other.entry) return false
+        if (next != other.next) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        var result = entry?.hashCode() ?: 0
+        result = 31 * result + next.hashCode()
+        return result
+    }
 }

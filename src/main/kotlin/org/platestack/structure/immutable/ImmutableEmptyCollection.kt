@@ -21,4 +21,10 @@ import java.io.Serializable
 internal object ImmutableEmptyCollection:
         AbstractImmutableCollection<Nothing>(),
         Collection<Nothing> by emptySet(),
-        Serializable { private const val serialVersionUID = 1L }
+        Serializable { private const val serialVersionUID = 1L
+
+    private val backend get() = emptySet<Nothing>()
+    override fun equals(other: Any?) = other === this || backend == other
+    override fun hashCode() = backend.hashCode()
+    override fun toString() = backend.toString()
+}

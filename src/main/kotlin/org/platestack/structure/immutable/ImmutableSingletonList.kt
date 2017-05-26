@@ -19,7 +19,12 @@ package org.platestack.structure.immutable
 import java.io.Serializable
 import java.util.*
 
-internal class ImmutableSingletonList<out E>(element: E):
+internal class ImmutableSingletonList<out E>(element: E, private val base: List<E> = Collections.singletonList(element)):
         AbstractImmutableList<E>(),
-        List<E> by Collections.singletonList(element),
-        Serializable { companion object { private const val serialVersionUID = 1L } }
+        List<E> by base,
+        Serializable { companion object { private const val serialVersionUID = 1L }
+
+    override fun equals(other: Any?) = other === this || base == other
+    override fun hashCode() = base.hashCode()
+    override fun toString() = base.toString()
+}

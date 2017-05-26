@@ -19,7 +19,12 @@ package org.platestack.structure.immutable
 import java.io.Serializable
 import java.util.*
 
-internal class ImmutableMirrorSet<out E>(backend: Set<E>):
+internal class ImmutableMirrorSet<out E>(private val backend: Set<E>):
         AbstractImmutableSet<E>(),
         Set<E> by Collections.unmodifiableSet(backend),
-        Serializable { companion object { private const val serialVersionUID = 1L } }
+        Serializable { companion object { private const val serialVersionUID = 1L }
+
+    override fun equals(other: Any?) = other === this || backend == other
+    override fun hashCode() = backend.hashCode()
+    override fun toString() = backend.toString()
+}

@@ -30,13 +30,48 @@
  *  limitations under the License.
  */
 
+import io.kotlintest.matchers.shouldBe
 import io.kotlintest.specs.ShouldSpec
-import org.platestack.structure.immutable.immutableMapOf
+import org.platestack.structure.immutable.*
 
 class Maps: ShouldSpec() {
     init {
-        val empty = immutableMapOf<String, String>()
-        val single = immutableMapOf("a" to "b")
-        val multiple = immutableMapOf("a" to "b", "b" to "c", "c" to "d")
+        "immutable maps should equates to normal maps" {
+            immutableMapOf<String, String>() shouldBe mapOf<String, String>()
+            immutableMapOf("a" to "b") shouldBe mapOf("a" to "b")
+            immutableMapOf("a" to "b", "b" to "c", "c" to "d") shouldBe mapOf("a" to "b", "b" to "c", "c" to "d")
+
+            immutableHashMapOf<String, String>() shouldBe emptyMap<String, String>()
+            immutableHashMapOf("a" to "b") shouldBe mapOf("a" to "b")
+            immutableHashMapOf("a" to "b", "b" to "c", "c" to "d") shouldBe mapOf("a" to "b", "b" to "c", "c" to "d")
+
+            immutableSortedMapOf("a" to "b", "b" to "a") shouldBe mapOf("a" to "b", "b" to "a")
+            immutableSortedMapOf(reverseOrder(), "a" to "b", "b" to "a") shouldBe mapOf("a" to "b", "b" to "a")
+
+            immutableNavigableMapOf("a" to "b", "b" to "a") shouldBe mapOf("a" to "b", "b" to "a")
+            immutableNavigableMapOf(reverseOrder(), "a" to "b", "b" to "a") shouldBe mapOf("a" to "b", "b" to "a")
+        }
+
+        "immutable sets should equates to normal sets" {
+            immutableSetOf<String>() shouldBe  setOf<String>()
+            immutableSetOf("a") shouldBe setOf("a")
+            immutableSetOf("a", "b", "c") shouldBe setOf("a", "b", "c")
+
+            immutableHashSetOf<String>() shouldBe  setOf<String>()
+            immutableHashSetOf("a") shouldBe setOf("a")
+            immutableHashSetOf("a", "b", "c") shouldBe setOf("a", "b", "c")
+
+            immutableSortedSetOf("a", "b", "c") shouldBe setOf("a", "b", "c")
+            immutableSortedSetOf(reverseOrder(), "a", "b", "c") shouldBe setOf("a", "b", "c")
+
+            immutableNavigableSetOf("a", "b", "c") shouldBe setOf("a", "b", "c")
+            immutableNavigableSetOf(reverseOrder(), "a", "b", "c") shouldBe setOf("a", "b", "c")
+        }
+
+        "immutable lists should equates to normal sets" {
+            immutableListOf<String>() shouldBe listOf<String>()
+            immutableListOf("a") shouldBe listOf("a")
+            immutableListOf("a", "b", "c") shouldBe listOf("a", "b", "c")
+        }
     }
 }

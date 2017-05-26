@@ -16,13 +16,17 @@
 
 package org.platestack.structure.immutable
 
+import java.io.Serializable
 import java.util.*
 
-internal class ImmutableMirrorNavigableSet<E>(backend: NavigableSet<E>)
-    : AbstractImmutableNavigableSet<E>(), NavigableSet<E> by Collections.unmodifiableNavigableSet(backend) {
-    companion object {
-        private const val serialVersionUID = 1L
-    }
+internal class ImmutableMirrorNavigableSet<E>(private val backend: NavigableSet<E>):
+        AbstractImmutableNavigableSet<E>(),
+        NavigableSet<E> by Collections.unmodifiableNavigableSet(backend),
+        Serializable { companion object { private const val serialVersionUID = 1L }
+
+    override fun equals(other: Any?) = other === this || backend == other
+    override fun hashCode() = backend.hashCode()
+    override fun toString() = backend.toString()
 
     override fun sub(fromElement: E, fromInclusive: Boolean, toElement: E, toInclusive: Boolean): ImmutableNavigableSet<E> {
         return ImmutableMirrorNavigableSet(subSet(fromElement, fromInclusive, toElement, toInclusive))

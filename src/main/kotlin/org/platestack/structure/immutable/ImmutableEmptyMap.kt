@@ -21,4 +21,10 @@ import java.io.Serializable
 internal object ImmutableEmptyMap:
         AbstractImmutableMap<Nothing, Nothing>(),
         Map<Nothing, Nothing> by emptyMap(),
-        Serializable { private const val serialVersionUID = 1L }
+        Serializable { private const val serialVersionUID = 1L
+
+    private val backend: Map<Nothing, Nothing> get() = emptyMap()
+    override fun equals(other: Any?) = other === this || backend == other
+    override fun hashCode() = backend.hashCode()
+    override fun toString() = backend.toString()
+}

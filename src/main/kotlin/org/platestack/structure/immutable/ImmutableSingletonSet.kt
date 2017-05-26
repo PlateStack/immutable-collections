@@ -19,18 +19,12 @@ package org.platestack.structure.immutable
 import java.io.Serializable
 import java.util.*
 
-internal class ImmutableSingletonSet<E>(element: E):
+internal class ImmutableSingletonSet<out E>(element: E, private val base: Set<E> = Collections.singleton(element)):
         AbstractImmutableSet<E>(),
-        Set<E> by Collections.singleton(element),
-        Serializable { companion object { private const val serialVersionUID = 1L } }
+        Set<E> by base,
+        Serializable { companion object { private const val serialVersionUID = 1L }
 
-
-/*
-internal class ImmutableSingletonSet<E>(val element: E): AbstractImmutableSet<E>() {
-    override val size = 1
-    override fun contains(element: E) = element == this.element
-    override fun containsAll(elements: Collection<E>) = elements.all { it in this }
-    override fun isEmpty() = false
-    override fun iterator() = SingleIterator(element)
+    override fun equals(other: Any?) = other === this || base == other
+    override fun hashCode() = base.hashCode()
+    override fun toString() = base.toString()
 }
-*/

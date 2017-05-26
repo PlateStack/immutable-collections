@@ -16,13 +16,16 @@
 
 package org.platestack.structure.immutable
 
+import java.io.Serializable
 import java.util.*
 
-internal class ImmutableMirrorSortedMap<K, V>(backend: SortedMap<K, V>)
-    : AbstractImmutableSortedMap<K, V>(), SortedMap<K, V> by Collections.unmodifiableSortedMap(backend) {
-    companion object {
-        private const val serialVersionUID = 1L
-    }
+internal class ImmutableMirrorSortedMap<K, V>(private val backend: SortedMap<K, V>): AbstractImmutableSortedMap<K, V>(),
+        SortedMap<K, V> by Collections.unmodifiableSortedMap(backend),
+        Serializable { companion object { private const val serialVersionUID = 1L }
+
+    override fun equals(other: Any?) = other === this || backend == other
+    override fun hashCode() = backend.hashCode()
+    override fun toString() = backend.toString()
 
     override fun sub(fromKey: K, toKey: K): ImmutableSortedMap<K, V> {
         return ImmutableMirrorSortedMap(subMap(fromKey, toKey))

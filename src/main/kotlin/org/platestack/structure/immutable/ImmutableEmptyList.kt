@@ -21,4 +21,10 @@ import java.io.Serializable
 internal object ImmutableEmptyList:
         AbstractImmutableList<Nothing>(),
         List<Nothing> by emptyList(),
-        Serializable { private const val serialVersionUID = 1L }
+        Serializable { private const val serialVersionUID = 1L
+
+    private val backend get() = emptyList<Nothing>()
+    override fun equals(other: Any?) = other === this || backend == other
+    override fun hashCode() = backend.hashCode()
+    override fun toString() = backend.toString()
+}

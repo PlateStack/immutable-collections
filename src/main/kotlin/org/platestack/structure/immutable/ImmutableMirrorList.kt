@@ -19,10 +19,12 @@ package org.platestack.structure.immutable
 import java.io.Serializable
 import java.util.*
 
-internal class ImmutableMirrorList<out E>(backend: List<E>)
-    : AbstractImmutableList<E>(), List<E> by Collections.unmodifiableList(backend), Serializable {
-    companion object {
-        private const val serialVersionUID = 1L
-    }
-}
+internal class ImmutableMirrorList<out E>(private val backend: List<E>):
+        AbstractImmutableList<E>(),
+        List<E> by Collections.unmodifiableList(backend),
+        Serializable { companion object { private const val serialVersionUID = 1L }
 
+    override fun equals(other: Any?) = other === this || backend == other
+    override fun hashCode() = backend.hashCode()
+    override fun toString() = backend.toString()
+}

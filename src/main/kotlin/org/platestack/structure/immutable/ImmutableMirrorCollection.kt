@@ -19,7 +19,10 @@ package org.platestack.structure.immutable
 import java.io.Serializable
 import java.util.*
 
-internal class ImmutableMirrorCollection<out E>(backend: Collection<E>):
+internal class ImmutableMirrorCollection<out E>(private val backend: Collection<E>):
         AbstractImmutableCollection<E>(),
         Collection<E> by Collections.unmodifiableCollection(backend),
-        Serializable { companion object { private const val serialVersionUID = 1L } }
+        Serializable { companion object { private const val serialVersionUID = 1L }
+
+    override fun toString() = backend.toString()
+}

@@ -16,13 +16,17 @@
 
 package org.platestack.structure.immutable
 
+import java.io.Serializable
 import java.util.*
 
-internal class ImmutableMirrorSortedSet<E>(backend: SortedSet<E>)
-    : AbstractImmutableSortedSet<E>(), SortedSet<E> by Collections.unmodifiableSortedSet(backend) {
-    companion object {
-        private const val serialVersionUID = 1L
-    }
+internal class ImmutableMirrorSortedSet<E>(private val backend: SortedSet<E>):
+        AbstractImmutableSortedSet<E>(),
+        SortedSet<E> by Collections.unmodifiableSortedSet(backend),
+        Serializable { companion object { private const val serialVersionUID = 1L }
+
+    override fun equals(other: Any?) = other === this || backend == other
+    override fun hashCode() = backend.hashCode()
+    override fun toString() = backend.toString()
 
     override fun sub(fromElement: E, toElement: E): ImmutableSortedSet<E> {
         return ImmutableMirrorSortedSet(subSet(fromElement, toElement))

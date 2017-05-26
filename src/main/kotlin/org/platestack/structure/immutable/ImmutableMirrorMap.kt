@@ -19,7 +19,12 @@ package org.platestack.structure.immutable
 import java.io.Serializable
 import java.util.*
 
-internal class ImmutableMirrorMap<K, out V>(backend: Map<K, V>):
-        Map<K, V> by Collections.unmodifiableMap(backend),
+internal class ImmutableMirrorMap<K, out V>(private val backend: Map<K, V>):
         AbstractImmutableMap<K, V>() ,
-        Serializable { companion object { private const val serialVersionUID = 1L } }
+        Map<K, V> by Collections.unmodifiableMap(backend),
+        Serializable { companion object { private const val serialVersionUID = 1L }
+
+    override fun equals(other: Any?) = other === this || backend == other
+    override fun hashCode() = backend.hashCode()
+    override fun toString() = backend.toString()
+}

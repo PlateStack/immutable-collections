@@ -268,6 +268,16 @@ fun <K,V> SortedMap<K,V>.toImmutableNavigableMap(): ImmutableNavigableMap<K, V>
         = ImmutableMirrorNavigableMap(TreeMap(this))
 
 /**
+ * Returns an immutable sorted map containing all key-value pairs from the original map.
+ *
+ * The returned map will be sorted by the natural ordering of the elements
+ *
+ * The returned map is serializable
+ */
+fun <K,V> Map<K,V>.toImmutableNavigableMap(): ImmutableNavigableMap<K, V>
+        = ImmutableMirrorNavigableMap(TreeMap(this))
+
+/**
  * Returns an immutable sorted map containing all key-value pairs from the original source.
  *
  * The returned map will be sorted by the given comparator.
