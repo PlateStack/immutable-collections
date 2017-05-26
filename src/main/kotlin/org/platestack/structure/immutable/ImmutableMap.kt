@@ -16,4 +16,11 @@
 
 package org.platestack.structure.immutable
 
+/**
+ * A [map][Map] which strict that strictly prohibits modifications after its creation.
+ *
+ * @param K the type of map keys. The map is invariant on its key type, as it
+ *          can accept key as a parameter (of [containsKey] for example) and return it in [keys] set.
+ * @param V the type of map values. The map is covariant on its value type.
+ */
 interface ImmutableMap<K, out V>: Map<K, V>

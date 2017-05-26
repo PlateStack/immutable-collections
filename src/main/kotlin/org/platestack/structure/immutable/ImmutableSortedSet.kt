@@ -18,6 +18,13 @@ package org.platestack.structure.immutable
 
 import java.util.*
 
+/**
+ * An interface that mimics the original [SortedSet] but without exposing modification functions to Kotlin source codes.
+ *
+ * Modifications are strictly forbidden after the map is created.
+ *
+ * @param E the type of elements contained in the list. The list is covariant on its element type.
+ */
 interface ImmutableSortedSet<E>: ImmutableSet<E> {
     /**
      * Returns the comparator used to order the elements in this set,

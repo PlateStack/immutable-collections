@@ -16,4 +16,8 @@
 
 package org.platestack.structure.immutable
 
+/**
+ * A [Set] that strictly prohibits modifications after its creation.
+ * @param E the type of elements contained in the list. The list is covariant on its element type.
+ */
 interface ImmutableSet<out E> : Set<E>, ImmutableCollection<E>

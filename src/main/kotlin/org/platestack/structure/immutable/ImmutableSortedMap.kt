@@ -19,7 +19,16 @@ package org.platestack.structure.immutable
 import java.util.*
 import kotlin.NoSuchElementException
 
-interface ImmutableSortedMap<K, V>: ImmutableMap<K, V> {
+/**
+ * An interface that mimics the original [SortedMap] but without exposing modification functions to Kotlin source codes.
+ *
+ * Modifications are strictly forbidden after the map is created.
+ *
+ * @param K the type of map keys. The map is invariant on its key type, as it
+ *          can accept key as a parameter (of [containsKey] for example) and return it in [keys] set.
+ * @param V the type of map values. The map is covariant on its value type.
+ */
+interface ImmutableSortedMap<K, out V>: ImmutableMap<K, V> {
     /**
      * Returns the comparator used to order the keys in this map, or
      * `null` if this map uses the [ natural ordering][Comparable] of its keys.

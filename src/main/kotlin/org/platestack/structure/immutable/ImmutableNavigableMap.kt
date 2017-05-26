@@ -19,7 +19,16 @@ package org.platestack.structure.immutable
 import java.util.*
 import kotlin.collections.Map.Entry
 
-interface ImmutableNavigableMap<K, V>: ImmutableSortedMap<K, V> {
+/**
+ * An interface that mimics the original [NavigableMap] but without exposing modification functions to Kotlin source codes.
+ *
+ * Modifications are strictly forbidden after the map is created.
+ *
+ * @param K the type of map keys. The map is invariant on its key type, as it
+ *          can accept key as a parameter (of [containsKey] for example) and return it in [keys] set.
+ * @param V the type of map values. The map is covariant on its value type.
+ */
+interface ImmutableNavigableMap<K, out V>: ImmutableSortedMap<K, V> {
     /**
      * Returns a key-value mapping associated with the greatest key
      * strictly less than the given key, or `null` if there is

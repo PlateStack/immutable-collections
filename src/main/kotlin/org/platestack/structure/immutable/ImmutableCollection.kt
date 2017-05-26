@@ -16,4 +16,8 @@
 
 package org.platestack.structure.immutable
 
+/**
+ * A generic [collection of elements][Collection] that strictly prohibits modifications after its creation.
+ * @param E the type of elements contained in the collection. The collection is covariant on its element type.
+ */
 interface ImmutableCollection<out E>: Collection<E>
