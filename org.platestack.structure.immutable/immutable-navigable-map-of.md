@@ -2,13 +2,13 @@
 
 # immutableNavigableMapOf
 
-`fun <K : Comparable<K>, V> immutableNavigableMapOf(vararg pairs: Pair<K, V>): `[`ImmutableNavigableMap`](-immutable-navigable-map/index.md)`<K, V>`
+`fun <K : Comparable<K>, V> immutableNavigableMapOf(vararg pairs: Pair<K, V>): `[`ImmutableNavigableMap`](-immutable-navigable-map/index.md)`<K, V>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableMaps.kt#L87)
 
 Returns a navigable map with the specified contents, given as a list of pairs where the first value is the key and the second is the value.
 
 The returned map is serializable
 
-`fun <K : Comparable<K>, V> immutableNavigableMapOf(comparator: `[`Comparator`](http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html)`<in K>?, vararg pairs: Pair<K, V>): `[`ImmutableNavigableMap`](-immutable-navigable-map/index.md)`<K, V>`
+`fun <K : Comparable<K>, V> immutableNavigableMapOf(comparator: `[`Comparator`](http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html)`<in K>?, vararg pairs: Pair<K, V>): `[`ImmutableNavigableMap`](-immutable-navigable-map/index.md)`<K, V>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableMaps.kt#L96)
 
 Returns a navigable map with the specified contents, given as a list of pairs where the first value is the key and the second is the value.
 

@@ -2,7 +2,7 @@
 
 # ImmutableSortedMap
 
-`interface ImmutableSortedMap<K, out V> : `[`ImmutableMap`](../-immutable-map.md)`<K, V>`
+`interface ImmutableSortedMap<K, out V> : `[`ImmutableMap`](../-immutable-map.md)`<K, V>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableSortedMap.kt#L31)
 
 An interface that mimics the original [SortedMap](http://docs.oracle.com/javase/6/docs/api/java/util/SortedMap.html) but without exposing modification functions to Kotlin source codes.
 

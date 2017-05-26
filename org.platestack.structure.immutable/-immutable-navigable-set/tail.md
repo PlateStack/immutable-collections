@@ -2,7 +2,7 @@
 
 # tail
 
-`abstract fun tail(fromElement: E, inclusive: Boolean): `[`ImmutableNavigableSet`](index.md)`<E>`
+`abstract fun tail(fromElement: E, inclusive: Boolean): `[`ImmutableNavigableSet`](index.md)`<E>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableSet.kt#L266)
 
 Returns a view of the portion of this set whose elements are greater
 than (or equal to, if `inclusive` is true) `fromElement`.
@@ -40,7 +40,7 @@ on an attempt to insert an element outside its range.
 a view of the portion of this set whose elements are greater
     than or equal to `fromElement`
 
-`abstract fun tail(fromElement: E): `[`ImmutableSortedSet`](../-immutable-sorted-set/index.md)`<E>`
+`abstract fun tail(fromElement: E): `[`ImmutableSortedSet`](../-immutable-sorted-set/index.md)`<E>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableSet.kt#L289)
 
 See [ImmutableSortedSet.tail](../-immutable-sorted-set/tail.md)
 

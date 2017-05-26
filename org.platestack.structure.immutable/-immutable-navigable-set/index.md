@@ -2,7 +2,7 @@
 
 # ImmutableNavigableSet
 
-`interface ImmutableNavigableSet<E> : `[`ImmutableSortedSet`](../-immutable-sorted-set/index.md)`<E>`
+`interface ImmutableNavigableSet<E> : `[`ImmutableSortedSet`](../-immutable-sorted-set/index.md)`<E>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableSet.kt#L28)
 
 An interface that mimics the original [NavigableSet](http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html) but without exposing modification functions to Kotlin source codes.
 

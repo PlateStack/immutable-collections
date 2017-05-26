@@ -2,7 +2,7 @@
 
 # tail
 
-`abstract fun tail(fromKey: K, inclusive: Boolean): `[`ImmutableNavigableMap`](index.md)`<K, V>`
+`abstract fun tail(fromKey: K, inclusive: Boolean): `[`ImmutableNavigableMap`](index.md)`<K, V>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableMap.kt#L380)
 
 Returns a view of the portion of this map whose keys are greater than (or
 equal to, if `inclusive` is true) `fromKey`.  The returned
@@ -40,7 +40,7 @@ on an attempt to insert a key outside its range.
 a view of the portion of this map whose keys are greater than
     (or equal to, if `inclusive` is true) `fromKey`
 
-`abstract fun tail(fromKey: K): `[`ImmutableSortedMap`](../-immutable-sorted-map/index.md)`<K, V>`
+`abstract fun tail(fromKey: K): `[`ImmutableSortedMap`](../-immutable-sorted-map/index.md)`<K, V>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableMap.kt#L404)
 
 See [ImmutableSortedMap.tail](../-immutable-sorted-map/tail.md)
 

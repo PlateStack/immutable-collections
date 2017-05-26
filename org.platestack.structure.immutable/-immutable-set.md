@@ -2,7 +2,7 @@
 
 # ImmutableSet
 
-`interface ImmutableSet<out E> : Set<E>, `[`ImmutableCollection`](-immutable-collection.md)`<E>`
+`interface ImmutableSet<out E> : Set<E>, `[`ImmutableCollection`](-immutable-collection.md)`<E>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableSet.kt#L23)
 
 A [Set](#) that strictly prohibits modifications after its creation.
 

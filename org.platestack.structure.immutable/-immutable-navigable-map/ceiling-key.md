@@ -2,7 +2,7 @@
 
 # ceilingKey
 
-`abstract fun ceilingKey(key: K): K?`
+`abstract fun ceilingKey(key: K): K?` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableMap.kt#L141)
 
 Returns the least key greater than or equal to the given key,
 or `null` if there is no such key.

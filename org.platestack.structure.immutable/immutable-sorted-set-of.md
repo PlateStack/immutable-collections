@@ -2,13 +2,13 @@
 
 # immutableSortedSetOf
 
-`fun <E> immutableSortedSetOf(vararg elements: E): `[`ImmutableSortedSet`](-immutable-sorted-set/index.md)`<E>`
+`fun <E> immutableSortedSetOf(vararg elements: E): `[`ImmutableSortedSet`](-immutable-sorted-set/index.md)`<E>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableCollections.kt#L84)
 
 Returns an immutable sorted set of given elements. All elements inserted into a sorted set must implement the Comparable interface.
 
 The returned set is serializable.
 
-`fun <E> immutableSortedSetOf(comparator: `[`Comparator`](http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html)`<in E>?, vararg elements: E): `[`ImmutableSortedSet`](-immutable-sorted-set/index.md)`<E>`
+`fun <E> immutableSortedSetOf(comparator: `[`Comparator`](http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html)`<in E>?, vararg elements: E): `[`ImmutableSortedSet`](-immutable-sorted-set/index.md)`<E>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableCollections.kt#L91)
 
 Returns an immutable sorted set of given elements. All elements are will be sorted by the given comparator.
 

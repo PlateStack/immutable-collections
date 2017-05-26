@@ -2,7 +2,7 @@
 
 # ceiling
 
-`abstract fun ceiling(e: E): E?`
+`abstract fun ceiling(e: E): E?` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableSet.kt#L81)
 
 Returns the least element in this set greater than or equal to
 the given element, or `null` if there is no such element.

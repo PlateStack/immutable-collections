@@ -2,7 +2,7 @@
 
 # lower
 
-`abstract fun lower(e: E): E?`
+`abstract fun lower(e: E): E?` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableSet.kt#L45)
 
 Returns the greatest element in this set strictly less than the
 given element, or `null` if there is no such element.

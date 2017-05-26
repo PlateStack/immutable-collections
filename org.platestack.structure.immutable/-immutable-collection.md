@@ -2,7 +2,7 @@
 
 # ImmutableCollection
 
-`interface ImmutableCollection<out E> : Collection<E>`
+`interface ImmutableCollection<out E> : Collection<E>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableCollection.kt#L23)
 
 A generic [collection of elements](#) that strictly prohibits modifications after its creation.
 

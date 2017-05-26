@@ -2,7 +2,7 @@
 
 # entries
 
-`abstract val entries: Set<Entry<K, V>>`
+`abstract val entries: Set<Entry<K, V>>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableSortedMap.kt#L223)
 
 Returns a [Set](#) view of the mappings contained in this map.
 The set's iterator returns the entries in ascending key order.

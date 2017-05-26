@@ -2,7 +2,7 @@
 
 # descending
 
-`abstract val descending: `[`ImmutableNavigableSet`](index.md)`<E>`
+`abstract val descending: `[`ImmutableNavigableSet`](index.md)`<E>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableSet.kt#L140)
 
 Returns a reverse order view of the elements contained in this set.
 The descending set is backed by this set, so changes to the set are

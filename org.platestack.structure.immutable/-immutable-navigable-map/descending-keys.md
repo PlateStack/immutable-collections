@@ -2,7 +2,7 @@
 
 # descendingKeys
 
-`abstract val descendingKeys: `[`ImmutableNavigableSet`](../-immutable-navigable-set/index.md)`<K>`
+`abstract val descendingKeys: `[`ImmutableNavigableSet`](../-immutable-navigable-set/index.md)`<K>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableMap.kt#L262)
 
 Returns a reverse order [NavigableSet](http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html) view of the keys contained in this map.
 The set's iterator returns the keys in descending order.

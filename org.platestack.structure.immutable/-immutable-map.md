@@ -2,7 +2,7 @@
 
 # ImmutableMap
 
-`interface ImmutableMap<K, out V> : Map<K, V>`
+`interface ImmutableMap<K, out V> : Map<K, V>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableMap.kt#L26)
 
 A [map](#) which strict that strictly prohibits modifications after its creation.
 

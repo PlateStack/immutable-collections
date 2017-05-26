@@ -2,7 +2,7 @@
 
 # higherEntry
 
-`abstract fun higherEntry(key: K): Entry<K, V>?`
+`abstract fun higherEntry(key: K): Entry<K, V>?` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableMap.kt#L160)
 
 Returns a key-value mapping associated with the least key
 strictly greater than the given key, or `null` if there

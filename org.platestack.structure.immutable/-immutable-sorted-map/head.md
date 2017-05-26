@@ -2,7 +2,7 @@
 
 # head
 
-`abstract fun head(toKey: K): `[`ImmutableSortedMap`](index.md)`<K, V>`
+`abstract fun head(toKey: K): `[`ImmutableSortedMap`](index.md)`<K, V>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableSortedMap.kt#L111)
 
 Returns a view of the portion of this map whose keys are
 strictly less than `toKey`.  The returned map is backed

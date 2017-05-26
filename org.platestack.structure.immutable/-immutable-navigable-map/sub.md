@@ -2,7 +2,7 @@
 
 # sub
 
-`abstract fun sub(fromKey: K, fromInclusive: Boolean, toKey: K, toInclusive: Boolean): `[`ImmutableNavigableMap`](index.md)`<K, V>`
+`abstract fun sub(fromKey: K, fromInclusive: Boolean, toKey: K, toInclusive: Boolean): `[`ImmutableNavigableMap`](index.md)`<K, V>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableMap.kt#L307)
 
 Returns a view of the portion of this map whose keys range from
 `fromKey` to `toKey`.  If `fromKey` and
@@ -49,7 +49,7 @@ submap either of whose endpoints lie outside its range.
 a view of the portion of this map whose keys range from
     `fromKey` to `toKey`
 
-`abstract fun sub(fromKey: K, toKey: K): `[`ImmutableSortedMap`](../-immutable-sorted-map/index.md)`<K, V>`
+`abstract fun sub(fromKey: K, toKey: K): `[`ImmutableSortedMap`](../-immutable-sorted-map/index.md)`<K, V>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableMap.kt#L388)
 
 See [ImmutableSortedMap.sub](../-immutable-sorted-map/sub.md)
 

@@ -2,7 +2,7 @@
 
 # sub
 
-`abstract fun sub(fromElement: E, toElement: E): `[`ImmutableSortedSet`](index.md)`<E>`
+`abstract fun sub(fromElement: E, toElement: E): `[`ImmutableSortedSet`](index.md)`<E>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableSortedSet.kt#L76)
 
 Returns a view of the portion of this set whose elements range
 from fromElement, inclusive, to toElement,

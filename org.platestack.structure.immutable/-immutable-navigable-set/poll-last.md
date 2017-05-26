@@ -2,7 +2,7 @@
 
 # pollLast
 
-`abstract fun pollLast(): E?`
+`abstract fun pollLast(): E?` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableSet.kt#L115)
 
 Retrieves and removes the last (highest) element,
 or returns `null` if this set is empty.

@@ -2,7 +2,7 @@
 
 # toImmutableNavigableSet
 
-`fun <E> Iterable<E>.toImmutableNavigableSet(comparator: `[`Comparator`](http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html)`<in E>? = null): `[`ImmutableNavigableSet`](../-immutable-navigable-set/index.md)`<E>`
+`fun <E> Iterable<E>.toImmutableNavigableSet(comparator: `[`Comparator`](http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html)`<in E>? = null): `[`ImmutableNavigableSet`](../-immutable-navigable-set/index.md)`<E>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableCollections.kt#L278)
 
 Returns an immutable navigable set of all elements. The returned set is serializable.
 

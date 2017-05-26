@@ -2,7 +2,7 @@
 
 # head
 
-`abstract fun head(toKey: K, inclusive: Boolean): `[`ImmutableNavigableMap`](index.md)`<K, V>`
+`abstract fun head(toKey: K, inclusive: Boolean): `[`ImmutableNavigableMap`](index.md)`<K, V>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableMap.kt#L344)
 
 Returns a view of the portion of this map whose keys are less than (or
 equal to, if `inclusive` is true) `toKey`.  The returned
@@ -40,7 +40,7 @@ on an attempt to insert a key outside its range.
 a view of the portion of this map whose keys are less than
     (or equal to, if `inclusive` is true) `toKey`
 
-`abstract fun head(toKey: K): `[`ImmutableSortedMap`](../-immutable-sorted-map/index.md)`<K, V>`
+`abstract fun head(toKey: K): `[`ImmutableSortedMap`](../-immutable-sorted-map/index.md)`<K, V>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableMap.kt#L396)
 
 See [ImmutableSortedMap.head](../-immutable-sorted-map/head.md)
 

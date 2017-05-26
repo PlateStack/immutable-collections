@@ -2,7 +2,7 @@
 
 # lastKey
 
-`abstract fun lastKey(): K`
+`abstract fun lastKey(): K` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableSortedMap.kt#L164)
 
 Returns the last (highest) key currently in this map.
 

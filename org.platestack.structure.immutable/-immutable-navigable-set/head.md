@@ -2,7 +2,7 @@
 
 # head
 
-`abstract fun head(toElement: E, inclusive: Boolean): `[`ImmutableNavigableSet`](index.md)`<E>`
+`abstract fun head(toElement: E, inclusive: Boolean): `[`ImmutableNavigableSet`](index.md)`<E>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableSet.kt#L230)
 
 Returns a view of the portion of this set whose elements are less than
 (or equal to, if `inclusive` is true) `toElement`.  The
@@ -40,7 +40,7 @@ on an attempt to insert an element outside its range.
 a view of the portion of this set whose elements are less than
     (or equal to, if `inclusive` is true) `toElement`
 
-`abstract fun head(toElement: E): `[`ImmutableSortedSet`](../-immutable-sorted-set/index.md)`<E>`
+`abstract fun head(toElement: E): `[`ImmutableSortedSet`](../-immutable-sorted-set/index.md)`<E>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableSet.kt#L281)
 
 See [ImmutableSortedSet.head](../-immutable-sorted-set/head.md)
 

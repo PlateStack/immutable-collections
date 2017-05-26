@@ -2,7 +2,7 @@
 
 # comparator
 
-`abstract fun comparator(): `[`Comparator`](http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html)`<in K>?`
+`abstract fun comparator(): `[`Comparator`](http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html)`<in K>?` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableSortedMap.kt#L40)
 
 Returns the comparator used to order the keys in this map, or
 `null` if this map uses the [natural ordering](#) of its keys.

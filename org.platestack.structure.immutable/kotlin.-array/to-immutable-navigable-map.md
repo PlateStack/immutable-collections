@@ -2,7 +2,7 @@
 
 # toImmutableNavigableMap
 
-`fun <K, V> Array<Pair<K, V>>.toImmutableNavigableMap(comparator: `[`Comparator`](http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html)`<in K>? = null): `[`ImmutableNavigableMap`](../-immutable-navigable-map/index.md)`<K, V>`
+`fun <K, V> Array<Pair<K, V>>.toImmutableNavigableMap(comparator: `[`Comparator`](http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html)`<in K>? = null): `[`ImmutableNavigableMap`](../-immutable-navigable-map/index.md)`<K, V>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableMaps.kt#L298)
 
 Returns an immutable sorted map containing all key-value pairs from the original source.
 

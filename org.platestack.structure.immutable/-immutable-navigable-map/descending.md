@@ -2,7 +2,7 @@
 
 # descending
 
-`abstract val descending: `[`ImmutableNavigableMap`](index.md)`<K, V>`
+`abstract val descending: `[`ImmutableNavigableMap`](index.md)`<K, V>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableMap.kt#L232)
 
 Returns a reverse order view of the mappings contained in this map.
 The descending map is backed by this map, so changes to the map are

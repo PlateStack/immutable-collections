@@ -2,7 +2,7 @@
 
 # tail
 
-`abstract fun tail(fromElement: E): `[`ImmutableSortedSet`](index.md)`<E>`
+`abstract fun tail(fromElement: E): `[`ImmutableSortedSet`](index.md)`<E>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableSortedSet.kt#L142)
 
 Returns a view of the portion of this set whose elements are
 greater than or equal to fromElement.  The returned

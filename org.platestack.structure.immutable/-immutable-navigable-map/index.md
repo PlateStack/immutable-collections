@@ -2,7 +2,7 @@
 
 # ImmutableNavigableMap
 
-`interface ImmutableNavigableMap<K, out V> : `[`ImmutableSortedMap`](../-immutable-sorted-map/index.md)`<K, V>`
+`interface ImmutableNavigableMap<K, out V> : `[`ImmutableSortedMap`](../-immutable-sorted-map/index.md)`<K, V>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableMap.kt#L31)
 
 An interface that mimics the original [NavigableMap](http://docs.oracle.com/javase/6/docs/api/java/util/NavigableMap.html) but without exposing modification functions to Kotlin source codes.
 

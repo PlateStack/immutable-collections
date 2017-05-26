@@ -2,7 +2,7 @@
 
 # toImmutableSortedMap
 
-`fun <K, V> Iterable<Pair<K, V>>.toImmutableSortedMap(comparator: `[`Comparator`](http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html)`<in K>? = null): `[`ImmutableMap`](../-immutable-map.md)`<K, V>`
+`fun <K, V> Iterable<Pair<K, V>>.toImmutableSortedMap(comparator: `[`Comparator`](http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html)`<in K>? = null): `[`ImmutableMap`](../-immutable-map.md)`<K, V>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableMaps.kt#L224)
 
 Returns an immutable sorted map containing all key-value pairs from the original source.
 

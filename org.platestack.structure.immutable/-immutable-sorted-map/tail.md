@@ -2,7 +2,7 @@
 
 # tail
 
-`abstract fun tail(fromKey: K): `[`ImmutableSortedMap`](index.md)`<K, V>`
+`abstract fun tail(fromKey: K): `[`ImmutableSortedMap`](index.md)`<K, V>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableSortedMap.kt#L144)
 
 Returns a view of the portion of this map whose keys are
 greater than or equal to `fromKey`.  The returned map is

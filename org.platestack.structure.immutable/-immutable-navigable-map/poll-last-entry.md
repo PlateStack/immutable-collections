@@ -2,7 +2,7 @@
 
 # pollLastEntry
 
-`abstract fun pollLastEntry(): Entry<K, V>?`
+`abstract fun pollLastEntry(): Entry<K, V>?` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableMap.kt#L214)
 
 Removes and returns a key-value mapping associated with
 the greatest key in this map, or `null` if the map is empty.

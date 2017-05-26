@@ -2,7 +2,7 @@
 
 # ImmutableList
 
-`interface ImmutableList<out E> : List<E>, `[`ImmutableCollection`](-immutable-collection.md)`<E>`
+`interface ImmutableList<out E> : List<E>, `[`ImmutableCollection`](-immutable-collection.md)`<E>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableList.kt#L23)
 
 A [list](#) that strictly prohibits modifications after its creation.
 

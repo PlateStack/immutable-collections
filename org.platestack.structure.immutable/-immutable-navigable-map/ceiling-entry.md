@@ -2,7 +2,7 @@
 
 # ceilingEntry
 
-`abstract fun ceilingEntry(key: K): Entry<K, V>?`
+`abstract fun ceilingEntry(key: K): Entry<K, V>?` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableMap.kt#L123)
 
 Returns a key-value mapping associated with the least key
 greater than or equal to the given key, or `null` if

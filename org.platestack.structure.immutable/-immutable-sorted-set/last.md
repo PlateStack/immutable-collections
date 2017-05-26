@@ -2,7 +2,7 @@
 
 # last
 
-`abstract fun last(): E`
+`abstract fun last(): E` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableSortedSet.kt#L162)
 
 Returns the last (highest) element currently in this set.
 

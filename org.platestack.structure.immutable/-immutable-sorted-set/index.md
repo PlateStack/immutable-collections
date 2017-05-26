@@ -2,7 +2,7 @@
 
 # ImmutableSortedSet
 
-`interface ImmutableSortedSet<E> : `[`ImmutableSet`](../-immutable-set.md)`<E>`
+`interface ImmutableSortedSet<E> : `[`ImmutableSet`](../-immutable-set.md)`<E>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableSortedSet.kt#L28)
 
 An interface that mimics the original [SortedSet](http://docs.oracle.com/javase/6/docs/api/java/util/SortedSet.html) but without exposing modification functions to Kotlin source codes.
 

@@ -2,7 +2,7 @@
 
 # toImmutableSet
 
-`fun <E> Collection<E>.toImmutableSet(): `[`ImmutableSet`](../-immutable-set.md)`<E>`
+`fun <E> Collection<E>.toImmutableSet(): `[`ImmutableSet`](../-immutable-set.md)`<E>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableCollections.kt#L162)
 
 Returns a Set of all elements. The returned set is serializable.
 

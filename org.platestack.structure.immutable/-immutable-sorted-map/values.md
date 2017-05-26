@@ -2,7 +2,7 @@
 
 # values
 
-`abstract val values: Collection<V>`
+`abstract val values: Collection<V>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableSortedMap.kt#L203)
 
 Returns a [Collection](#) view of the values contained in this map.
 The collection's iterator returns the values in ascending order

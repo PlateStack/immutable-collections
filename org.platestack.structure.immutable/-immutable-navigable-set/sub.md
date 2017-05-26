@@ -2,7 +2,7 @@
 
 # sub
 
-`abstract fun sub(fromElement: E, fromInclusive: Boolean, toElement: E, toInclusive: Boolean): `[`ImmutableNavigableSet`](index.md)`<E>`
+`abstract fun sub(fromElement: E, fromInclusive: Boolean, toElement: E, toInclusive: Boolean): `[`ImmutableNavigableSet`](index.md)`<E>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableSet.kt#L193)
 
 Returns a view of the portion of this set whose elements range from
 `fromElement` to `toElement`.  If `fromElement` and
@@ -49,7 +49,7 @@ on an attempt to insert an element outside its range.
 a view of the portion of this set whose elements range from
     `fromElement`, inclusive, to `toElement`, exclusive
 
-`abstract fun sub(fromElement: E, toElement: E): `[`ImmutableSortedSet`](../-immutable-sorted-set/index.md)`<E>`
+`abstract fun sub(fromElement: E, toElement: E): `[`ImmutableSortedSet`](../-immutable-sorted-set/index.md)`<E>` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableSet.kt#L273)
 
 See [ImmutableSortedSet.sub](../-immutable-sorted-set/sub.md)
 

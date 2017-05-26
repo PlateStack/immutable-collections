@@ -2,7 +2,7 @@
 
 # floorEntry
 
-`abstract fun floorEntry(key: K): Entry<K, V>?`
+`abstract fun floorEntry(key: K): Entry<K, V>?` [(source)](https://github.com/PlateStack/immutable-collections/blob/v0.1.0-alpha/src/main/kotlin/org/platestack/structure/immutable/ImmutableNavigableMap.kt#L86)
 
 Returns a key-value mapping associated with the greatest key
 less than or equal to the given key, or `null` if there
