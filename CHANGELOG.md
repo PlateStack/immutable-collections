@@ -27,5 +27,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - SortedSet
   - NavigableSet
 
-[Unreleased]: https://github.com/PlateStack/immutable-collections/compare/v0.1.0-alpha...HEAD
+[Unreleased]: https://github.com/PlateStack/immutable-collections/compare/v0.1.0-alpha...0.2.0
 [0.1.0-alpha]: https://github.com/PlateStack/immutable-collections/compare/v0.0.0...v0.1.0-alpha
