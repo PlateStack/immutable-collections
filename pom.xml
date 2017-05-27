@@ -21,7 +21,7 @@
 
     <groupId>org.platestack</groupId>
     <artifactId>immutable-collections</artifactId>
-    <version>0.1.0-alpha.0.1.dev-SNAPSHOT</version>
+    <version>0.2.0-0.0.1.dev-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>immutable-collections</name>
@@ -82,6 +82,13 @@
             <version>${kotlintest.version}</version>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>platestack-immutable-collections</id>
+            <url>https://api.bintray.com/maven/platestack/platestack/immutable-collections/;publish=1</url>
+        </repository>
+    </distributionManagement>
 
     <build>
         <sourceDirectory>src/main/kotlin</sourceDirectory>

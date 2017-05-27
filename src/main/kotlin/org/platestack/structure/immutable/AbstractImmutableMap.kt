@@ -16,4 +16,22 @@
 
 package org.platestack.structure.immutable
 
-internal abstract class AbstractImmutableMap<K, out V>: ImmutableMap<K, V>
+import java.io.Serializable
+
+internal abstract class AbstractImmutableMap<K, out V>: ImmutableMap<K, V>, Serializable {
+    companion object {
+        private const val serialVersionUID = 1L
+    }
+
+    protected open fun <K, V> MutableMap<K, V>.build(): ImmutableMap<K, V> = toImmutableMap()
+
+    override fun builder(): ImmutableMap.Builder<K, @UnsafeVariance V> = toMutable().let {
+        object : MutableMap<K, V> by it, ImmutableMap.Builder<K, V> {
+            override fun build() = it.build()
+
+            override fun equals(other: Any?) = other === this || it == other
+            override fun hashCode() = it.hashCode()
+            override fun toString() = it.toString()
+        }
+    }
+}

@@ -19,7 +19,8 @@ package org.platestack.structure.immutable
 import java.io.Serializable
 import java.util.*
 
-internal class ImmutableMirrorSortedMap<K, V>(private val backend: SortedMap<K, V>): AbstractImmutableSortedMap<K, V>(),
+internal class ImmutableMirrorSortedMap<K, V>(private val backend: SortedMap<K, V>):
+        AbstractImmutableSortedMap<K, V>(),
         SortedMap<K, V> by Collections.unmodifiableSortedMap(backend),
         Serializable { companion object { private const val serialVersionUID = 1L }
 

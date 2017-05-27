@@ -16,4 +16,23 @@
 
 package org.platestack.structure.immutable
 
-internal abstract class AbstractImmutableSortedMap<K, V>: ImmutableSortedMap<K, V>
+import java.io.Serializable
+import java.util.*
+
+internal abstract class AbstractImmutableSortedMap<K, out V>: ImmutableSortedMap<K, V>, Serializable {
+    companion object {
+        private const val serialVersionUID = 1L
+    }
+
+    protected open fun <K, V> SortedMap<K, V>.build(): ImmutableSortedMap<K, V> = toImmutableSortedMap()
+
+    override fun builder(): ImmutableSortedMap.Builder<K, @UnsafeVariance V> = toMutable().let {
+        object : SortedMap<K, V> by it, ImmutableSortedMap.Builder<K, V> {
+            override fun build() = it.build()
+
+            override fun equals(other: Any?) = other === this || it == other
+            override fun hashCode() = it.hashCode()
+            override fun toString() = it.toString()
+        }
+    }
+}

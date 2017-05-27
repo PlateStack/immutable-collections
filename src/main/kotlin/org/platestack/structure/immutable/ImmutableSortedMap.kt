@@ -29,6 +29,12 @@ import kotlin.NoSuchElementException
  * @param V the type of map values. The map is covariant on its value type.
  */
 interface ImmutableSortedMap<K, out V>: ImmutableMap<K, V> {
+    override fun toMutable(): SortedMap<K, @UnsafeVariance V> = treeMapOf(comparator(), this)
+    override fun builder(): Builder<K, @UnsafeVariance V>
+    interface Builder<K, V>: SortedMap<K, V>, ImmutableMap.Builder<K, V> {
+        override fun build(): ImmutableSortedMap<K, V>
+    }
+
     /**
      * Returns the comparator used to order the keys in this map, or
      * `null` if this map uses the [ natural ordering][Comparable] of its keys.

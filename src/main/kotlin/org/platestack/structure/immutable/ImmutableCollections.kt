@@ -19,8 +19,8 @@ package org.platestack.structure.immutable
 
 import java.util.*
 
-private fun <E> treeSet(comparator: Comparator<in E>?, vararg elements: E) = TreeSet(comparator).apply { addAll(elements) }
-private fun <E> treeSet(comparator: Comparator<in E>?, elements: Iterable<E>) = TreeSet(comparator).apply { addAll(elements) }
+private fun <E> treeSetOf(comparator: Comparator<in E>?, vararg elements: E) = TreeSet(comparator).apply { addAll(elements) }
+internal fun <E> treeSetOf(comparator: Comparator<in E>?, elements: Iterable<E>) = TreeSet(comparator).apply { addAll(elements) }
 
 /////////////////////////////////////////////////////////////
 
@@ -88,7 +88,7 @@ fun <E> immutableSortedSetOf(vararg elements: E): ImmutableSortedSet<E> = Immuta
  *
  * The returned set is serializable.
  */
-fun <E> immutableSortedSetOf(comparator: Comparator<in E>?, vararg elements: E): ImmutableSortedSet<E> = ImmutableMirrorSortedSet(treeSet(comparator, *elements))
+fun <E> immutableSortedSetOf(comparator: Comparator<in E>?, vararg elements: E): ImmutableSortedSet<E> = ImmutableMirrorSortedSet(treeSetOf(comparator, *elements))
 
 /////////////////////////////////////////////////////////////
 
@@ -104,7 +104,7 @@ fun <E> immutableNavigableSetOf(vararg elements: E): ImmutableNavigableSet<E> = 
  *
  * The returned set is serializable.
  */
-fun <E> immutableNavigableSetOf(comparator: Comparator<in E>?, vararg elements: E): ImmutableNavigableSet<E> = ImmutableMirrorNavigableSet(treeSet(comparator, *elements))
+fun <E> immutableNavigableSetOf(comparator: Comparator<in E>?, vararg elements: E): ImmutableNavigableSet<E> = ImmutableMirrorNavigableSet(treeSetOf(comparator, *elements))
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -276,7 +276,7 @@ fun <E> Array<E>.toImmutableSortedSet(comparator: Comparator<in E>? = null): Imm
  * The elements will be sorted by the given comparator.
  */
 fun <E> Iterable<E>.toImmutableNavigableSet(comparator: Comparator<in E>? = null): ImmutableNavigableSet<E>
-        = ImmutableMirrorNavigableSet(treeSet(comparator, this))
+        = ImmutableMirrorNavigableSet(treeSetOf(comparator, this))
 
 /**
  * Returns an immutable navigable set of all elements. The returned set is serializable.

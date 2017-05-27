@@ -21,7 +21,7 @@ import java.util.*
 
 private fun <K,V> treeMapOf(comparator: Comparator<in K>?, vararg pairs: Pair<K,V>) = TreeMap<K,V>(comparator).apply { putAll(pairs) }
 private fun <K,V> treeMapOf(comparator: Comparator<in K>?, pairs: Iterable<Pair<K,V>>) = TreeMap<K,V>(comparator).apply { putAll(pairs) }
-private fun <K,V> treeMapOf(comparator: Comparator<in K>?, pairs: Map<K,V>) = TreeMap<K,V>(comparator).apply { putAll(pairs) }
+internal fun <K,V> treeMapOf(comparator: Comparator<in K>?, pairs: Map<K,V>) = TreeMap<K,V>(comparator).apply { putAll(pairs) }
 
 /////////////////////////////////////////////////////////////
 

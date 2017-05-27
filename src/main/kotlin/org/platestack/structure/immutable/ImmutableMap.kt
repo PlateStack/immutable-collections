@@ -23,4 +23,10 @@ package org.platestack.structure.immutable
  *          can accept key as a parameter (of [containsKey] for example) and return it in [keys] set.
  * @param V the type of map values. The map is covariant on its value type.
  */
-interface ImmutableMap<K, out V>: Map<K, V>
+interface ImmutableMap<K, out V>: Map<K, V> {
+    fun toMutable(): MutableMap<K, @UnsafeVariance V> = toMutableMap()
+    fun builder(): Builder<K, @UnsafeVariance V>
+    interface Builder<K, V>: MutableMap<K, V> {
+        fun build(): ImmutableMap<K, V>
+    }
+}

@@ -23,9 +23,15 @@ import java.util.*
  *
  * Modifications are strictly forbidden after the map is created.
  *
- * @param E the type of elements contained in the list. The list is covariant on its element type.
+ * @param E the type of elements contained in the list. The list is invariant on its element type.
  */
 interface ImmutableSortedSet<E>: ImmutableSet<E> {
+    override fun toMutable(): SortedSet<E> = treeSetOf(comparator(), this)
+    override fun builder(): Builder<E>
+    interface Builder<E>: SortedSet<E>, ImmutableSet.Builder<E> {
+        override fun build(): ImmutableSortedSet<E>
+    }
+
     /**
      * Returns the comparator used to order the elements in this set,
      * or <tt>null</tt> if this set uses the [ natural ordering][Comparable] of its elements.

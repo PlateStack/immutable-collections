@@ -22,5 +22,16 @@ internal abstract class AbstractImmutableList<out E>: ImmutableList<E>, Serializ
     companion object {
         private const val serialVersionUID = 1L
     }
-}
 
+    protected open fun <T> MutableList<T>.build(): ImmutableList<T> = toImmutableList()
+
+    override fun builder(): ImmutableList.Builder<@UnsafeVariance E> = toMutable().let {
+        object : MutableList<E> by it, ImmutableList.Builder<E> {
+            override fun build() = it.build()
+
+            override fun equals(other: Any?) = other === this || it == other
+            override fun hashCode() = it.hashCode()
+            override fun toString() = it.toString()
+        }
+    }
+}

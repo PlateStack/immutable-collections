@@ -29,6 +29,12 @@ import kotlin.collections.Map.Entry
  * @param V the type of map values. The map is covariant on its value type.
  */
 interface ImmutableNavigableMap<K, out V>: ImmutableSortedMap<K, V> {
+    override fun toMutable(): NavigableMap<K, @UnsafeVariance V> = treeMapOf(comparator(), this)
+    override fun builder(): Builder<K, @UnsafeVariance V>
+    interface Builder<K, V>: NavigableMap<K, V>, ImmutableSortedMap.Builder<K, V> {
+        override fun build(): ImmutableSortedMap<K, V>
+    }
+
     /**
      * Returns a key-value mapping associated with the greatest key
      * strictly less than the given key, or `null` if there is

@@ -5,7 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
-No notable changes.
+### Added
+- Builders to all immutable interfaces
+- toMutable() to all immutable interfaces
+- Modification extension functions which returns a new immutable copy with the modifications
+
+### Fixed
+- Some immutable maps and sorted sets were not serializable
 
 ## [0.1.0-alpha] - 2017-05-26
 ### Implements

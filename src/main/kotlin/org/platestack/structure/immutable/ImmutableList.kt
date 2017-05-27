@@ -20,4 +20,10 @@ package org.platestack.structure.immutable
  * A [list][List] that strictly prohibits modifications after its creation.
  * @param E the type of elements contained in the list. The list is covariant on its element type.
  */
-interface ImmutableList<out E>: List<E>, ImmutableCollection<E>
+interface ImmutableList<out E>: List<E>, ImmutableCollection<E> {
+    override fun toMutable(): MutableList<@UnsafeVariance E> = toMutableList()
+    override fun builder(): Builder<@UnsafeVariance E>
+    interface Builder<E>: MutableList<E>, ImmutableCollection.Builder<E> {
+        override fun build(): ImmutableList<E>
+    }
+}

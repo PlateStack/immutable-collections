@@ -26,6 +26,12 @@ import java.util.*
  * @param E the type of elements contained in the list. The list is covariant on its element type.
  */
 interface ImmutableNavigableSet<E>: ImmutableSortedSet<E> {
+    override fun toMutable(): NavigableSet<E> = treeSetOf(comparator(), this)
+    override fun builder(): Builder<E>
+    interface Builder<E>: SortedSet<E>, ImmutableSortedSet.Builder<E> {
+        override fun build(): ImmutableSortedSet<E>
+    }
+
     /**
      * Returns the greatest element in this set strictly less than the
      * given element, or `null` if there is no such element.

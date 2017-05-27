@@ -22,5 +22,16 @@ internal abstract class AbstractImmutableSet<out E>: ImmutableSet<E>, Serializab
     companion object {
         private const val serialVersionUID = 1L
     }
-}
 
+    protected open fun <T> MutableSet<T>.build(): ImmutableSet<T> = toImmutableSet()
+
+    override fun builder(): ImmutableSet.Builder<@UnsafeVariance E> = toMutable().let {
+        object : MutableSet<E> by it, ImmutableSet.Builder<E> {
+            override fun build() = it.build()
+
+            override fun equals(other: Any?) = other === this || it == other
+            override fun hashCode() = it.hashCode()
+            override fun toString() = it.toString()
+        }
+    }
+}
