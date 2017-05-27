@@ -22,7 +22,6 @@ import java.util.function.Function
 import java.util.function.Predicate
 
 inline fun <E, reified C: ImmutableCollection<E>> C.mutate(mutation: ImmutableCollection.Builder<E>.() -> Unit) = builder().apply(mutation).build() as C
-inline fun <E, reified C: ImmutableCollection<E>> C.addB(element: E) = mutate { add(element) }
 inline fun <E, reified C: ImmutableCollection<E>> C.add(element: E) = mutate { add(element) }
 inline fun <E, reified C: ImmutableCollection<E>> C.addAll(elements: Collection<E>) = mutate { addAll(elements) }
 inline fun <E, reified C: ImmutableCollection<E>> C.addAll(elements: Iterable<E>) = mutate { addAll(elements) }
