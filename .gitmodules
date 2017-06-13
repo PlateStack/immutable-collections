@@ -1,8 +1,0 @@
-[submodule "build/dokka/immutable-collections"]
-	path = build/dokka/immutable-collections
-	url = https://github.com/PlateStack/immutable-collections
-	branch = kdoc
-[submodule "build/javadoc"]
-	path = build/javadoc
-	url = https://github.com/PlateStack/immutable-collections
-	branch = javadoc
